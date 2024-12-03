@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Vedran\Desktop\AirQualityApp\build\CMakeFiles\bbe00507b46402d0f2d3cd947c1e61cb\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8AA8922A-B4AB-3606-B132-F33B1C914566}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

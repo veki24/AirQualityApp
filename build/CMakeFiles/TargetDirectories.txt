@@ -1,0 +1,3 @@
+C:/Users/Vedran/Desktop/AirQualityApp/build/CMakeFiles/AirQualityApp.dir
+C:/Users/Vedran/Desktop/AirQualityApp/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Vedran/Desktop/AirQualityApp/build/CMakeFiles/ZERO_CHECK.dir

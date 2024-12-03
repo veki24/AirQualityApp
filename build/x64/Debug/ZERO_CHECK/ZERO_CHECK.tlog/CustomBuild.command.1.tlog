@@ -1,0 +1,10 @@
+^C:\USERS\VEDRAN\DESKTOP\AIRQUALITYAPP\BUILD\CMAKEFILES\BBE00507B46402D0F2D3CD947C1E61CB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vedran/Desktop/AirQualityApp -BC:/Users/Vedran/Desktop/AirQualityApp/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Vedran/Desktop/AirQualityApp/build/AirQualityApp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
