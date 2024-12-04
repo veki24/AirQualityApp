@@ -16,6 +16,7 @@ C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPostgreSQL.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/FindZLIB.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake
 C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake
@@ -41,8 +42,14 @@ C:/Users/Vedran/vcpkg/installed/x64-windows/share/curl/CURLTargets-debug.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/curl/CURLTargets-release.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/curl/CURLTargets.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/curl/vcpkg-cmake-wrapper.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/libpqxx/libpqxx-config-version.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/libpqxx/libpqxx-config.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/libpqxx/libpqxx-targets-debug.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/libpqxx/libpqxx-targets-release.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/libpqxx/libpqxx-targets.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfigVersion.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonTargets.cmake
+C:/Users/Vedran/vcpkg/installed/x64-windows/share/postgresql/vcpkg-cmake-wrapper.cmake
 C:/Users/Vedran/vcpkg/installed/x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake
 C:/Users/Vedran/vcpkg/scripts/buildsystems/vcpkg.cmake

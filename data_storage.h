@@ -2,13 +2,20 @@
 #define DATA_STORAGE_H
 
 #include <string>
+#include <pqxx/pqxx> // PostgreSQL library
 
 class DataStorage {
-public:
-    // Save data to a file
-    void saveData(const std::string& data);
+private:
+    pqxx::connection connection; // Jedna trajna veza s bazom
 
-    // View stored data from the file
+public:
+    DataStorage(const std::string& connection_str);
+    ~DataStorage();
+
+    // Save data to the database
+    void saveData(const std::string& city, int aqi, double pm25, double pm10, double temperature, const std::string& timestamp);
+
+    // View stored data from the database
     void viewStoredData();
 };
 

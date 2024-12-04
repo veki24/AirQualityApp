@@ -38,59 +38,23 @@ std::string DataFetcher::fetchData(const std::string& url) {
 }
 
 // Parse JSON response and extract relevant data
-std::string DataFetcher::parseData(const std::string& data) {
+std::tuple<std::string, int, double, double, double, std::string> DataFetcher::parseData(const std::string& data) {
     try {
         json jsonData = json::parse(data);
         if (jsonData["status"] == "ok") {
             std::string city = jsonData["data"]["city"]["name"];
             int aqi = jsonData["data"]["aqi"];
             double pm25 = jsonData["data"]["iaqi"]["pm25"]["v"];
+            double pm10 = jsonData["data"]["iaqi"]["pm10"]["v"];
             double temperature = jsonData["data"]["iaqi"]["t"]["v"];
-            std::string date = jsonData["data"]["time"]["s"]; // Date of the data
+            std::string timestamp = jsonData["data"]["time"]["s"]; // Timestamp of the data
 
-            // Forecast Data
-            std::string forecastData;
-            for (const auto& daily : jsonData["data"]["forecast"]["daily"]["pm25"]) {
-                forecastData += "Date: " + daily["day"].get<std::string>() + " - PM2.5: " + std::to_string(daily["avg"].get<int>()) + "\n";
-            }
-
-            std::ostringstream result;
-            result << "City: " << city << "\n"
-                   << "AQI: " << aqi << "\n"
-                   << "PM2.5: " << pm25 << "\n"
-                   << "Temperature: " << temperature << "°C\n"
-                   << "Date: " << date << "\n\n"
-                   << "Forecast:\n" << forecastData;
-            return result.str();
+            return std::make_tuple(city, aqi, pm25, pm10, temperature, timestamp); // Return as a tuple
         } else {
-            return "Error: " + jsonData["data"].get<std::string>();
+            throw std::runtime_error("Error fetching data: " + jsonData["data"].get<std::string>());
         }
     } catch (const json::exception& e) {
-        return "Error parsing data: " + std::string(e.what());
+        throw std::runtime_error("Error parsing data: " + std::string(e.what()));
     }
 }
 
-
-// Fetch and parse forecast data
-std::string DataFetcher::fetchForecastData(const std::string& url) {
-    try {
-        std::string data = fetchData(url);
-        json jsonData = json::parse(data);
-        if (jsonData["status"] == "ok") {
-            std::ostringstream forecastResult;
-            forecastResult << "\nForecast for the next few days:\n";
-
-            for (const auto& day : jsonData["data"]["forecast"]["daily"]["pm25"]) {
-                forecastResult << "Date: " << day["day"] << "\n"
-                               << "Average PM2.5: " << day["avg"] << " µg/m³\n"
-                               << "Max PM2.5: " << day["max"] << " µg/m³\n"
-                               << "Min PM2.5: " << day["min"] << " µg/m³\n\n";
-            }
-            return forecastResult.str();
-        } else {
-            return "Error: " + jsonData["data"].get<std::string>();
-        }
-    } catch (const json::exception& e) {
-        return "Error fetching forecast data: " + std::string(e.what());
-    }
-}
