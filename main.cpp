@@ -31,5 +31,9 @@ int main() {
     auto [city3, aqi3, pm253, pm103, temperature3, timestamp3] = fetcher.parseData(dataZagreb3);
     storage.saveData(city3, aqi3, pm253, pm103, temperature3, timestamp3);
 
+    /*const std::string csvFilePath = "zagreb-3-air-quality.csv";
+    std::cout << "Importing data from CSV: " << csvFilePath << std::endl;
+    storage.importCSV("C:/Users/Vedran/Desktop/AirQualityApp/zagreb-3-air-quality.csv");*/
+
     return 0;
 }

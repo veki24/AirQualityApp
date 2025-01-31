@@ -17,6 +17,9 @@ public:
 
     // View stored data from the database
     void viewStoredData();
+
+    void importCSV(const std::string& filePath);
+
 };
 
 #endif // DATA_STORAGE_H
